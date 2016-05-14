@@ -7,10 +7,10 @@ RUN ln -s /opt/apache-tomcat-7.0.69 /opt/tomcat
 
 # fusionreactor
 RUN mkdir -p /opt/fusionreactor/ && wget -q https://intergral-dl.s3.amazonaws.com/FR/FusionReactor-6.1.2/fusionreactor.jar --output-document=/opt/fusionreactor/fusionreactor.jar 
-# ENV FRPASSWD buildpasswd
-# ENV FRLICENSE somelicense
-# ENV FR_OPTS "-javaagent:/opt/fusionreactor/fusionreactor.jar=address=8088 -Dfradminpassword=$FRPASSWD -Dfrlicense=$FRLICENSE"
-# ENV JAVA_OPTS "$JAVA_OPTS $FR_OPTS"
+
+ENV XMX 2560m 
+ENV XMS 2560m 
+ENV MaxPermSize 256m
 
 ADD start-tomcat.sh /opt/start-tomcat.sh
 RUN chmod 755 /opt/start-tomcat.sh
