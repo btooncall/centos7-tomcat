@@ -12,6 +12,7 @@ RUN mkdir -p /opt/fusionreactor/ && wget -q https://intergral-dl.s3.amazonaws.co
 ENV XMX 2560m 
 ENV XMS 2560m 
 ENV MaxPermSize 256m
+ENV JavaBullhornOptions ""
 
 # add environmental variables, startup for fusion reactor and additional modifications.
 # setenv.sh is automatically executed by catalina.sh
