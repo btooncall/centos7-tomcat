@@ -9,7 +9,3 @@ export JAVA_OPTS="${JAVA_OPTS} ${FR_OPTS} ${JavaBullhornOptions}"
 
 # Add basic stuff to classpath (tomcat-juli, commons-daemon, and bootstrap)
 export CLASSPATH="${CLASSPATH}:/opt/tomcat/bin/commons-daemon.jar:/opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli.jar"
-
-if [ ! -z "${loghost}" ]; then
-  echo "${loghost} loghost" >> /etc/hosts
-fi
