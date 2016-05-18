@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # set up fusion reactor options 
-export FR_OPTS="-javaagent:/opt/fusionreactor/fusionreactor.jar=address=8088 -Dfradminpassword=${FRPASSWD} -Dfrlicense=${FRLICENSE} -Dfrlicenseservice.leasetime.hint=10 -Dfrlicenseservice.deactivateOnShutdown=true"
+export FR_OPTS="-javaagent:/opt/fusionreactor/fusionreactor.jar=address=8088 -Dfradminpassword=${FRPASSWD} \
+      -Dfrlicense=${FRLICENSE} -Dfrlicenseservice.leasetime.hint=10 -Dfrlicenseservice.deactivateOnShutdown=true"
 
 export JAVA_OPTS="${JAVA_OPTS} -server -Xmx${XMX} -Xms${XMS} -XX:MaxPermSize=${MaxPermSize}"
 
