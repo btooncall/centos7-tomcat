@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # set up fusion reactor options 
-export FR_OPTS="-javaagent:/opt/fusionreactor/fusionreactor.jar=address=8088 -Dfradminpassword=${FRPASSWD} \
+export FR_OPTS="-javaagent:/opt/fusionreactor/fusionreactor.jar=name=$(hostname -s),address=8088 -Dfradminpassword=${FRPASSWD} \
       -Dfrlicense=${FRLICENSE} -Dfrlicenseservice.leasetime.hint=10 -Dfrlicenseservice.deactivateOnShutdown=true \
       -Dfrregisterwith=http://restuser:admin@fram:8087/fusionreactor -Dfrshutdownaction=remove \
       -Dfrregisterhostname=${FRHOST}:${FRPORT}"
