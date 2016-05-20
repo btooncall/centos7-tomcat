@@ -3,7 +3,7 @@
 # set up fusion reactor options 
 export FR_OPTS="-javaagent:/opt/fusionreactor/fusionreactor.jar=address=8088 -Dfradminpassword=${FRPASSWD} \
       -Dfrlicense=${FRLICENSE} -Dfrlicenseservice.leasetime.hint=10 -Dfrlicenseservice.deactivateOnShutdown=true \
-      -Dfrregisterwith=http://restuser:/admin@fram:8087/fusionreactor -Dfrshutdownaction=remove \
+      -Dfrregisterwith=http://restuser:admin@fram:8087/fusionreactor -Dfrshutdownaction=remove \
       -Dfrregisterhostname=${FRHOST}:${FRPORT}"
 
 export JAVA_OPTS="${JAVA_OPTS} -server -Xmx${XMX} -Xms${XMS} -XX:MaxPermSize=${MaxPermSize}"
